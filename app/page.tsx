@@ -347,8 +347,12 @@ export default function Home() {
       </section>
 
       <section className="method wrap" id="method">
-        <div><span>HOW WE CALCULATE</span><h2>Fair pricing.<br />No guesswork.</h2></div>
-        <div className="method-grid"><article><b>01</b><h3>Audience value</h3><p>Follower count and engagement estimate the campaign&apos;s likely reach.</p></article><article><b>02</b><h3>Creative scope</h3><p>Format, volume and on-site production account for the work involved.</p></article><article><b>03</b><h3>Business rights</h3><p>Paid usage and exclusivity are priced as additional commercial value.</p></article></div>
+        <div className="method-intro"><span>WHAT SHAPES YOUR ESTIMATE</span><h2>A fair offer starts with the full picture.</h2><p>PlateRate looks at the creator&apos;s audience, the work you&apos;re requesting, and how your restaurant plans to use the content.</p></div>
+        <div className="method-grid">
+          <article><span className="method-icon" aria-hidden="true">◎</span><div><small>THEIR AUDIENCE</small><h3>How many people could they reach?</h3><p>Follower count and engagement help estimate how many viewers may genuinely see and interact with the promotion.</p></div></article>
+          <article><span className="method-icon" aria-hidden="true">▶</span><div><small>THE CONTENT</small><h3>What are you asking them to create?</h3><p>A quick mention takes less work than a dedicated video or an on-site restaurant visit. More videos also increase the fee.</p></div></article>
+          <article><span className="method-icon" aria-hidden="true">◇</span><div><small>YOUR USE OF THE VIDEO</small><h3>What happens after it&apos;s posted?</h3><p>Paid advertising, long-term reuse, and asking the creator to avoid competitors add business value—and usually cost more.</p></div></article>
+        </div>
       </section>
       <footer className="wrap"><a className="brand" href="#top"><span>PR</span> PlateRate</a><p>Built for independent restaurants and hospitality teams.</p></footer>
     </main>
