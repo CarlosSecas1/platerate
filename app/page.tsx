@@ -93,6 +93,7 @@ const compact = (value: number) => new Intl.NumberFormat("en-US", { notation: "c
 
 export default function Home() {
   const [input, setInput] = useState<EstimateInput>({ followers: 50000, engagementRate: 4, deliverables: 1, platform: "instagram", videoType: "dedicated", usageRights: "organic", exclusivity: "none", travel: false });
+  const [followerCount, setFollowerCount] = useState("50000");
   const estimate = useMemo(() => calculateEstimate(input), [input]);
   const [animated, setAnimated] = useState(estimate);
   const [creatorHandle, setCreatorHandle] = useState("");
@@ -175,6 +176,7 @@ export default function Home() {
       setLookupState("success");
       if (data.subscribers !== null) {
         setInput((current) => ({ ...current, platform: "youtube", followers: data.subscribers }));
+        setFollowerCount(String(data.subscribers));
         setLookupMessage("Subscriber count added to your estimate.");
       } else {
         setLookupMessage("This creator hides their subscriber count. Enter it manually if you know it.");
@@ -240,7 +242,7 @@ export default function Home() {
 
           <div className="field-grid">
             <label className="field"><span>Platform</span><select value={input.platform} onChange={(e) => { update("platform", e.target.value); if (e.target.value !== "youtube") { setCreator(null); setLookupState("idle"); } }}><option value="instagram">Instagram</option><option value="tiktok">TikTok</option><option value="youtube">YouTube</option></select></label>
-            <label className="field"><span>Follower count</span><div className="input-suffix"><input type="number" min="1000" max="10000000" value={input.followers} onChange={(e) => update("followers", Math.max(1000, Number(e.target.value)))} /><b>followers</b></div></label>
+            <label className="field"><span>Follower count</span><div className="input-suffix"><input type="number" inputMode="numeric" min="1000" max="10000000" step="1000" value={followerCount} onChange={(e) => { const value = e.target.value; setFollowerCount(value); if (value !== "" && Number.isFinite(Number(value))) update("followers", Math.min(10000000, Math.max(1, Number(value)))); }} onBlur={() => { const value = Math.min(10000000, Math.max(1000, Number(followerCount) || 1000)); setFollowerCount(String(value)); update("followers", value); }} /><b>followers</b></div></label>
             <div className="field engagement-field">
               <div className="field-title"><label htmlFor="engagement-rate">Average engagement rate</label><details><summary aria-label="Explain engagement rate">What&apos;s this?</summary><div className="help-popover"><strong>How engaged is their audience?</strong><p>It&apos;s the percentage of followers who typically like, comment, save, or share a post.</p><code>Average interactions ÷ followers × 100</code><p className="help-example">Example: 2,000 interactions ÷ 50,000 followers = 4%</p></div></details></div>
               <div className="input-suffix"><input id="engagement-rate" type="number" min="0.1" max="30" step="0.1" value={input.engagementRate} onChange={(e) => update("engagementRate", Number(e.target.value))} /><b>%</b></div>
