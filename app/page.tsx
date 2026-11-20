@@ -218,7 +218,6 @@ export default function Home() {
       </nav>
 
       <section className="hero wrap" id="top">
-        <div className="eyebrow"><span /> CREATOR PRICING, MADE CLEAR</div>
         <h1>Know what a food<br />creator is <em>worth.</em></h1>
         <p>Build a fair, data-informed offer for your next restaurant promotion—in under a minute.</p>
       </section>

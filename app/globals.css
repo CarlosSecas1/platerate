@@ -11,9 +11,7 @@ button,input,select { font:inherit; }
 .brand span { display:grid; place-items:center; width:36px; height:36px; border-radius:11px; color:#fff; background:var(--blue); font-size:12px; letter-spacing:-.4px; }
 .nav-link { color:var(--navy); font-weight:700; font-size:14px; text-decoration:none; border-bottom:1px solid var(--navy); }
 .hero { padding:72px 0 54px; }
-.eyebrow { display:flex; align-items:center; gap:9px; color:var(--blue); font-size:12px; font-weight:800; letter-spacing:1.6px; }
-.eyebrow span { width:28px; height:2px; background:var(--blue); }
-.hero h1 { max-width:790px; margin:20px 0 20px; font:750 clamp(48px,7vw,84px)/.99 var(--font-display),sans-serif; letter-spacing:-5px; }
+.hero h1 { max-width:790px; margin:0 0 20px; font:750 clamp(48px,7vw,84px)/.99 var(--font-display),sans-serif; letter-spacing:-5px; }
 .hero h1 em { color:var(--blue); font-style:normal; }
 .hero>p { max-width:590px; color:var(--muted); font-size:18px; line-height:1.65; margin:0; }
 .calculator { display:grid; grid-template-columns:minmax(0,1.55fr) minmax(340px,.85fr); background:#fff; border:1px solid var(--line); border-radius:24px; box-shadow:0 24px 70px rgba(8,41,95,.1); overflow:hidden; }
