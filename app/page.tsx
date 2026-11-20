@@ -223,7 +223,7 @@ export default function Home() {
 
       <section className="calculator wrap" aria-label="Influencer price calculator">
         <div className="form-panel">
-          <div className="panel-heading"><span>01</span><div><h2>Creator details</h2><p>Tell us about their audience and the campaign.</p></div></div>
+          <div className="panel-heading"><div><h2>Creator details</h2><p>Tell us about their audience and the campaign.</p></div></div>
 
           <div className="creator-lookup">
             <div className="lookup-heading"><div><span>AUTOFILL FROM YOUTUBE</span><p>Enter a channel handle to add its public subscriber count.</p></div><i>OPTIONAL</i></div>
@@ -290,7 +290,7 @@ export default function Home() {
 
         <div className="tool-grid">
           <article className="tool-card breakdown-card">
-            <div className="tool-card-heading"><span>02</span><div><h3>Why this price?</h3><p>See what moves the estimate up or down.</p></div></div>
+            <div className="tool-card-heading"><div><h3>Why this price?</h3><p>See what moves the estimate up or down.</p></div></div>
             <div className="breakdown-list">
               <div><span>Audience &amp; estimated reach</span><b>{money(breakdown.creatorFee)}</b></div>
               <div><span>Production base</span><b>{money(breakdown.productionFee)}</b></div>
@@ -305,7 +305,7 @@ export default function Home() {
           </article>
 
           <article className="tool-card message-card">
-            <div className="tool-card-heading"><span>03</span><div><h3>Start the conversation</h3><p>Use a clear offer that defines the scope.</p></div></div>
+            <div className="tool-card-heading"><div><h3>Start the conversation</h3><p>Use a clear offer that defines the scope.</p></div></div>
             <label className="mini-field"><span>Creator name or @handle</span><input value={comparisonName} onChange={(e) => setComparisonName(e.target.value)} placeholder="e.g. Maya or @foodwithmaya" /></label>
             <textarea readOnly value={negotiationMessage} aria-label="Generated negotiation message" />
             <button className="primary-action" type="button" onClick={copyNegotiationMessage}>{messageCopied ? "Copied to clipboard ✓" : "Copy negotiation message"}</button>
