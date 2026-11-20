@@ -9,7 +9,6 @@ button,input,select { font:inherit; }
 .nav { height:84px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
 .brand { display:flex; align-items:center; gap:10px; color:var(--navy); text-decoration:none; font:800 19px var(--font-display),sans-serif; letter-spacing:-.5px; }
 .brand span { display:grid; place-items:center; width:36px; height:36px; border-radius:11px; color:#fff; background:var(--blue); font-size:12px; letter-spacing:-.4px; }
-.nav-link { color:var(--navy); font-weight:700; font-size:14px; text-decoration:none; border-bottom:1px solid var(--navy); }
 .hero { padding:72px 0 54px; }
 .hero h1 { max-width:790px; margin:0 0 20px; font:750 clamp(48px,7vw,84px)/.99 var(--font-display),sans-serif; letter-spacing:-5px; }
 .hero h1 em { color:var(--blue); font-style:normal; }

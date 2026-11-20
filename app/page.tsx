@@ -214,7 +214,6 @@ export default function Home() {
     <main>
       <nav className="nav wrap">
         <a className="brand" href="#top" aria-label="PlateRate home"><span>PR</span> PlateRate</a>
-        <a className="nav-link" href="#method">How it works</a>
       </nav>
 
       <section className="hero wrap" id="top">
